@@ -24,9 +24,7 @@ class CreateOrderDetailsTable extends Migration
             $table->dateTime('dead_return')->nullable();
             $table->dateTime('date_return')->nullable();
             $table->string('status_return', 200)->nullable();
-            $table->float('pay', 5, 3)->nullable();
-            $table->integer('number')->nullable();
-             $table->string('note', 200)->nullable();
+            $table->string('note', 200)->nullable();
             $table->timestamps();
             $table->foreign('order_id')
                   ->references('id')
