@@ -115,9 +115,6 @@ class ReaderController extends Controller
         $reader->dOB = $request['dOB'];
         $reader->address = $request['address'];
         if ($request['avatar']) {
-            if($reader->avatar != null) {
-                unlink('images/readers/'.$reader->avatar);
-            }
             //them image
             $image = $request['avatar'];
             $extension = $image->getClientOriginalExtension();

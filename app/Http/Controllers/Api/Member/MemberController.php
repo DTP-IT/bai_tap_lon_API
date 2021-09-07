@@ -104,9 +104,6 @@ class MemberController extends Controller
             'email' => 'required'
         ]);
         if ($request['avatar']) {
-            if($member->avatar != null) {
-                unlink('images/members/'.$member->avatar);
-            }
             //update image
             $image = $request['avatar'];
             $extension = $image->getClientOriginalExtension();
