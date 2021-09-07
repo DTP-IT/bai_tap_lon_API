@@ -42,9 +42,7 @@
         <div><img src="images/readers/{{$data->avatar}}" style="max-width: 100px;" id="old_avatar" class="img-responsive" alt="Image" /></div>
         <div class="form-group">
             <label for="faculty" class="control-label">Khoa :</label>
-            <div class="col-sm-12" id="data_faculty">
-
-            </div>
+            <div class="col-sm-12" id="data_faculty"></div>
         </div>
         <div class="form-group">
             <label for="classR" class="control-label">Lớp :</label>
@@ -55,9 +53,9 @@
             </div>
         </div>
         <label for="phone">Số điện thoại</label><span style="color: red;">*</span>
-        <input type="text" class="form-control" id="phone" name="phone" placeholder="Số điện thoại...">
+        <input type="text" class="form-control" id="phone" name="phone" value="{{$data->phone}}" placeholder="Số điện thoại...">
         <label for="email">Email</label><span style="color: red;">*</span>
-        <input type="text" class="form-control" id="email" name="email" placeholder="Email...">
+        <input type="text" class="form-control" id="email" name="email" value="{{$data->email}}" placeholder="Email...">
 
     </div>
     <button type="submit" class="btn btn-primary btnDisable" id="btnSubmit">Submit</button>
@@ -65,7 +63,7 @@
 </form>
 </div>
  
-                </div>
+        </div>
             </div>
         </div>
     </div>
@@ -125,29 +123,27 @@
             var fID = $(this).val();
             console.log(fID);
             $.ajax({
-             url: "http://127.0.0.1:8000/api/classStudent",
-             type : 'GET',
-             dataType : 'json',
-             success : function(datas){
-                var data = '<select id="classStudent" name="classStudent" class="form-control" >';
-                $.each(datas, function(key, val) {
-                    if(val['faculty_id'] == fID) {
-                        data += `<option value="${val['id']}">${val['title']}</option>`; 
-                    }
-                });
-                data+= '</select>';
-                $('#data_classR').html(data);
-             },
-             error : function(){
-                 console.log('Lỗi rồi');
-             },
-             always : function(){
-                 console.log('complete');
-             }
+                url: "http://127.0.0.1:8000/api/classStudent",
+                type : 'GET',
+                dataType : 'json',
+                success : function(datas){
+                    var data = '<select id="classStudent" name="classStudent" class="form-control" >';
+                    $.each(datas, function(key, val) {
+                        if(val['faculty_id'] == fID) {
+                            data += `<option value="${val['id']}">${val['title']}</option>`; 
+                        }
+                    });
+                    data+= '</select>';
+                    $('#data_classR').html(data);
+                },
+                error : function(){
+                    console.log('Lỗi rồi');
+                },
+                always : function(){
+                    console.log('complete');
+                }
          });
         });
         });
-        
-    
 </script>
 @endsection

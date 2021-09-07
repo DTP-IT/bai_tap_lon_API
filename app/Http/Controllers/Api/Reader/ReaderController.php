@@ -102,14 +102,14 @@ class ReaderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $reader)
     {
-        $reader = Reader::find($id);
+        $reader = Reader::find($reader);
         $data = $request->validate([
             'phone' => 'required',
             'email' => 'required'
         ]);
-       $reader->class_id = $request['classStudent'];
+        $reader->class_id = $request['classStudent'];
         $reader->name = $request['name'];
         $reader->gender = $request['gender'];
         $reader->dOB = $request['dOB'];
