@@ -10,5 +10,4 @@ class Order extends Model
     protected $fillable = [
         'reader_id', 'created_date'
     ];
-    protected $table = 'orders';
 }

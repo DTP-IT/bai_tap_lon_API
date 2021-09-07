@@ -1,4 +1,4 @@
-<script src="plugins/jquery/dist/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!-- Bootstrap tether Core JavaScript -->
 <script src="plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/app-style-switcher.js"></script>

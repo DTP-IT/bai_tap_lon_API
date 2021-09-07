@@ -10,5 +10,4 @@ class Storage extends Model
     protected $fillable = [
         'title', 'note'
     ];
-    protected $table = 'storages';
 }

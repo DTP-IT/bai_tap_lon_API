@@ -1,4 +1,6 @@
 @extends('layouts.default')
+@section('title', 'Trang chủ')
+@section('breadcrumb', 'Trang chủ')
 @section('content')
  <!-- ============================================================== -->
                 <!-- Sales chart -->

@@ -16,3 +16,7 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::resource('member', 'Api\Member\MemberController');
+Route::resource('reader', 'Api\Reader\ReaderController');
+Route::resource('faculty', 'Api\Faculty\FacultyController')->only(['index']);
+Route::resource('classStudent', 'Api\ClassStudent\ClassStudentController')->only(['index']);

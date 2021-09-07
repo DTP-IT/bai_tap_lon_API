@@ -10,5 +10,4 @@ class Reader extends Model
     protected $fillable = [
         'class_id', 'gender', 'dOB', 'address', 'avatar', 'phone', 'email'
     ];
-    protected $table = 'readers';
 }

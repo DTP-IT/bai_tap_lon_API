@@ -7,16 +7,14 @@
                         <!-- User Profile-->
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="/" aria-expanded="false"><i class="mdi me-2 mdi-gauge"></i><span
-                                    class="hide-menu">Dashboard</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="profile" aria-expanded="false">
+                                    class="hide-menu">Trang chủ</span></a></li>
+                        <li class="sidebar-item"><a class="sidebar-link waves-effect waves-dark sidebar-link" href="profile" aria-expanded="false">
                                 <i class="mdi me-2 mdi-account-check"></i><span class="hide-menu">Profile</span></a>
                         </li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="table" aria-expanded="false"><i class="mdi me-2 mdi-table"></i><span class="hide-menu">Table</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="table" aria-expanded="false"><i class="mdi me-2 mdi-table"></i><span class="hide-menu">Table</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="table" aria-expanded="false"><i class="mdi me-2 mdi-table"></i><span class="hide-menu">Table</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="table" aria-expanded="false"><i class="mdi me-2 mdi-table"></i><span class="hide-menu">Table</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="table" aria-expanded="false"><i class="mdi me-2 mdi-table"></i><span class="hide-menu">Table</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="member" aria-expanded="false"><i class="mdi me-2 mdi-account-circle"></i><span class="hide-menu">Cán bộ thư viện</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="reader" aria-expanded="false"><i class="mdi me-2 mdi-account-multiple"></i><span class="hide-menu">Độc giả</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="book" aria-expanded="false"><i class="mdi me-2 mdi-library"></i><span class="hide-menu">Sách</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="borrow_return" aria-expanded="false"><i class="mdi me-2 mdi-book-open-page-variant"></i><span class="hide-menu">Mượn trả</span></a></li>
                     </ul>
 
                 </nav>

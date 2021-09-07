@@ -14,9 +14,9 @@
 Route::get('/', function () {
     return view('pages.dashboard.dashboard');
 });
-Route::get('table', function () {
-    return view('pages.table.table');
-});
+Route::get('member','Member\MemberController@index')->name('list-members');
+Route::get('reader','Reader\ReaderController@index')->name('list-readers');
+
 Route::get('profile', function () {
     return view('pages.profile.profile');
 });

@@ -48,13 +48,24 @@ return [
             'root' => storage_path('app'),
         ],
 
-        'public' => [
+        'member' => [
             'driver' => 'local',
-            'root' => storage_path('app/public'),
+            'root' => storage_path('../public/images/members/'),
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
         ],
-
+        'reader' => [
+            'driver' => 'local',
+            'root' => storage_path('../public/images/readers/'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+        'book' => [
+            'driver' => 'local',
+            'root' => storage_path('../public/images/books/'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en">
+<html dir="ltr" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <base href="{{asset('')}}">
@@ -12,10 +12,10 @@
     <meta name="description"
         content="Material Pro Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
     <meta name="robots" content="noindex,nofollow">
-    <title>Material Pro Lite Template by WrapPixel</title>
+    <title>@yield('title')</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/materialpro-lite/" />
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/logo-hunre.png">
     <!-- chartist CSS -->
     <link href="plugins/chartist-js/dist/chartist.min.css" rel="stylesheet">
     <link href="plugins/chartist-js/dist/chartist-init.css" rel="stylesheet">
@@ -25,4 +25,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Custom CSS -->
     <link href="css/style.min.css" rel="stylesheet">
+    <!-- Scripts -->
+    <script src="js/app.js" defer></script>
+
+<!-- Styles -->
+    <link href="css/app.css" rel="stylesheet">
 </head>

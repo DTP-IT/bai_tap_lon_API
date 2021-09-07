@@ -10,5 +10,4 @@ class PublishingCompany extends Model
     protected $fillable = [
         'title', 'note'
     ];
-    protected $table = 'publishing_companys';
 }
