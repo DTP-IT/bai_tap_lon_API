@@ -20,6 +20,7 @@ Route::get('reader','Reader\ReaderController@index')->name('list-readers');
 Route::get('profile', function () {
     return view('pages.profile.profile');
 });
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -3,6 +3,21 @@
             <div class="scroll-sidebar">
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
+                    @guest
+                    <ul id="sidebarnav">
+                        <!-- User Profile-->
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="{{ route('login') }}" aria-expanded="false"><i class="mdi me-2 mdi-gauge"></i><span
+                                    class="hide-menu">Trang chủ</span></a></li>
+                        <li class="sidebar-item"><a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('login') }}" aria-expanded="false">
+                                <i class="mdi me-2 mdi-account-check"></i><span class="hide-menu">Profile</span></a>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('login') }}" aria-expanded="false"><i class="mdi me-2 mdi-account-circle"></i><span class="hide-menu">Cán bộ thư viện</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('login') }}" aria-expanded="false"><i class="mdi me-2 mdi-account-multiple"></i><span class="hide-menu">Độc giả</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('login') }}" aria-expanded="false"><i class="mdi me-2 mdi-library"></i><span class="hide-menu">Sách</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('login') }}" aria-expanded="false"><i class="mdi me-2 mdi-book-open-page-variant"></i><span class="hide-menu">Mượn trả</span></a></li>
+                    </ul>
+                    @else
                     <ul id="sidebarnav">
                         <!-- User Profile-->
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
@@ -16,7 +31,7 @@
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="book" aria-expanded="false"><i class="mdi me-2 mdi-library"></i><span class="hide-menu">Sách</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="borrow_return" aria-expanded="false"><i class="mdi me-2 mdi-book-open-page-variant"></i><span class="hide-menu">Mượn trả</span></a></li>
                     </ul>
-
+                    @endguest
                 </nav>
                 <!-- End Sidebar navigation -->
             </div>
