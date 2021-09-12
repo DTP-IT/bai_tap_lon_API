@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html dir="ltr" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -30,4 +31,10 @@
 
 <!-- Styles -->
     <link href="css/app.css" rel="stylesheet">
+    <style type="text/css">
+        .book-list {
+          margin-top: 50px;
+          display: none;
+        }
+    </style>
 </head>

@@ -16,6 +16,8 @@
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('login') }}" aria-expanded="false"><i class="mdi me-2 mdi-account-multiple"></i><span class="hide-menu">Độc giả</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('login') }}" aria-expanded="false"><i class="mdi me-2 mdi-library"></i><span class="hide-menu">Sách</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('login') }}" aria-expanded="false"><i class="mdi me-2 mdi-book-open-page-variant"></i><span class="hide-menu">Mượn trả</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('login') }}" aria-expanded="false"><i class="mdi me-2 mdi-book-open-page-variant"></i><span class="hide-menu">Mượn sách</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('login') }}" aria-expanded="false"><i class="mdi me-2 mdi-book-open-page-variant"></i><span class="hide-menu">Trả sách</span></a></li>
                     </ul>
                     @else
                     <ul id="sidebarnav">
@@ -29,8 +31,11 @@
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="member" aria-expanded="false"><i class="mdi me-2 mdi-account-circle"></i><span class="hide-menu">Cán bộ thư viện</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="reader" aria-expanded="false"><i class="mdi me-2 mdi-account-multiple"></i><span class="hide-menu">Độc giả</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="book" aria-expanded="false"><i class="mdi me-2 mdi-library"></i><span class="hide-menu">Sách</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="borrow_return" aria-expanded="false"><i class="mdi me-2 mdi-book-open-page-variant"></i><span class="hide-menu">Mượn trả</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="order" aria-expanded="false"><i class="mdi me-2 mdi-book-open-page-variant"></i><span class="hide-menu">Mượn trả</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="borrow" aria-expanded="false"><i class="mdi me-2 mdi-arrow-right-bold"></i><span class="hide-menu">Mượn sách</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="return-book" aria-expanded="false"><i class="mdi me-2 mdi-arrow-left-bold"></i><span class="hide-menu">Trả sách</span></a></li>
                     </ul>
+                    
                     @endguest
                 </nav>
                 <!-- End Sidebar navigation -->

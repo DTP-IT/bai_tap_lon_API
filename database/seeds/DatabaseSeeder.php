@@ -17,7 +17,6 @@ class DatabaseSeeder extends Seeder
             ClassStudentSeeder::class,
             ReaderSeeder::class,
             CategorySeeder::class,
-            PublishingCompanySeeder::class,
             StorageSeeder::class,
             BookSeeder::class,
             OrderSeeder::class,

@@ -7,6 +7,13 @@
     <div class="col-sm-12">
         <div class="card">
             <div class="card-body">
+                @if (Session::get('message'))
+                <div class="alert alert-success">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <strong>Thông báo!</strong> {{ Session::get('message') }}
+                </div>
+                @endif
+                
                 <h1 align="center">Thêm nhân viên</h1>
 <form action="{{route('member.store')}}" method="POST" role="form" enctype="multipart/form-data">
     <legend>Vui lòng nhập thông tin</legend>

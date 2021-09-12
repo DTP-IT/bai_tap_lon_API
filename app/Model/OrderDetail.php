@@ -10,4 +10,5 @@ class OrderDetail extends Model
     protected $fillable = [
         'order_id', 'book_id', 'member_borrow_id', 'member_return_id', 'status_borrow', 'dead_return', 'date_return', 'status_return'
     ];
+    protected $table = 'order_details';
 }

@@ -80,7 +80,8 @@ class ReaderController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = Reader::find($id);
+        return $data;
     }
 
     /**
@@ -138,6 +139,6 @@ class ReaderController extends Controller
     {
         $reader = Reader::find($id);
         $reader->delete($id);
-        return redirect()->back();
+        return $reader;
     }
 }

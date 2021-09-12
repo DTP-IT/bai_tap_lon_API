@@ -12,7 +12,7 @@
 
                  <div class="row justify-content-center">
                 <!-- table data start -->
-                <table id="example" class="table table-striped table-hover" style="width:100%">
+                <table  class="table table-striped table-hover display" style="width:100%">
                     <thead>
                         <th>ID</th>
                         <th>Tên</th>
@@ -48,7 +48,7 @@
             var data = "";
             var pageNumber = "";
             $.each(datas, function(key, val) {
-                data += `<tr><td>${val['id']}</td><td>${val['name']}</td><td>${val['gender']}</td><td>${val['dOB']}</td><td>${val['address']}</td><td><img style="max-width: 80px;" src="images/members/${val['avatar']}" class="img-responsive" alt="Image"></td><td>${val['phone']}</td><td>${val['email']}</td><td style="padding-left: 2%;"><a href="api/member/${val['id']}/edit" class="btn btn-success">EDIT</a></td><td><form action="api/member/${val['id']}" method="POST">@method('DELETE') @csrf <button type="submit" class="btn btn-warning" name="" id="">DELETE</button></form></td></tr>`; 
+                data += `<tr><td>${val['id']}</td><td>${val['name']}</td><td>${val['gender']}</td><td>${val['dOB']}</td><td>${val['address']}</td><td><img style="max-width: 80px;" src="images/members/${val['avatar']}" class="img-responsive" alt="Image"></td><td>${val['phone']}</td><td>${val['email']}</td><td style="padding-left: 5%;"><a href="api/member/${val['id']}/edit" class="btn btn-success"><i class="mdi mdi-account-edit"></i></a></td><td><td><button class="btn btn-warning btnDeleteMember" value='${val['id']}'><i class="mdi mdi-delete-sweep"></i></button></td></tr>`; 
             });
             $('#data-members').append(data);
         },
@@ -64,8 +64,24 @@
         window.location.href="{{route('member.create')}}";
     });
 });
-$(document).ready(function() {
-    $('#example').DataTable();
-});
+$(document).on('click','.btnDeleteMember', function(e){
+    e.preventDefault();
+    var id = $(this).val();//id sản phẩm
+    var tr = $(this).closest('tr');
+    $.ajax({
+        url: 'api/member/'+id,
+        type : 'DELETE',
+        success : function(data){
+            tr.remove();
+        },
+        error : function(){
+            console.log('error');
+        },
+        always : function(){
+            console.log('complete');
+        }
+    });
+   }); 
+
 </script>
 @endsection

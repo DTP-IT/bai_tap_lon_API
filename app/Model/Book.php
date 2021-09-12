@@ -8,6 +8,6 @@ class Book extends Model
 {
     public $timestamps = false;
     protected $fillable = [
-        'category_id', 'publishing_company_id', 'storage_id', 'title', 'avatar', 'author', 'number', 'price'
+        'category_id', 'publishing_company_id', 'storage_id', 'title', 'avatar', 'author', 'number', 'price', 'isbn', 'description'
     ];
 }

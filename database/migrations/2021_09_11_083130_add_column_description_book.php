@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePublishingCompanysTable extends Migration
+class AddColumnDescriptionBook extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,8 @@ class CreatePublishingCompanysTable extends Migration
      */
     public function up()
     {
-        Schema::create('publishing_companys', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('title', 200)->nullable();
-            $table->string('note',255)->nullable();
-            $table->timestamps();
+        Schema::table('books', function (Blueprint $table) {
+            $table->longText('description')->after('price')->nullable();
         });
     }
 
@@ -28,6 +25,8 @@ class CreatePublishingCompanysTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('publishing_companys');
+        Schema::table('books', function (Blueprint $table) {
+            //
+        });
     }
 }

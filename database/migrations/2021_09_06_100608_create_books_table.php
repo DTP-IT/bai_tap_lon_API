@@ -16,7 +16,7 @@ class CreateBooksTable extends Migration
         Schema::create('books', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('category_id')->nullable();
-            $table->unsignedBigInteger('publishing_company_id')->nullable();
+            $table->string('publisher')->nullable();
             $table->unsignedBigInteger('storage_id')->nullable();
             $table->string('title', 200)->nullable();
             $table->string('avatar', 255)->nullable();
@@ -27,11 +27,6 @@ class CreateBooksTable extends Migration
             $table->foreign('category_id')
                   ->references('id')
                   ->on('categorys')
-                  ->onUpdate('NO ACTION')
-                  ->onDelete('cascade');
-            $table->foreign('publishing_company_id')
-                  ->references('id')
-                  ->on('publishing_companys')
                   ->onUpdate('NO ACTION')
                   ->onDelete('cascade');
             $table->foreign('storage_id')

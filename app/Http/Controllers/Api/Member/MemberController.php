@@ -9,6 +9,7 @@ use App\Model\Member;
 use Validate;
 use File;
 use Storage;
+use Session;
 class MemberController extends Controller
 {
     /**
@@ -63,6 +64,7 @@ class MemberController extends Controller
         $member->phone = $data['phone'];
         $member->email = $data['email'];
         $member->save();
+        Session::put('message','Thêm thành công');
         return redirect()->back();
     }
 
@@ -131,6 +133,6 @@ class MemberController extends Controller
     {
         $member = Member::find($id);
         $member->delete($id);
-        return redirect()->back();
+        return $member;
     }
 }
