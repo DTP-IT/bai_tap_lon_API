@@ -54,7 +54,7 @@
 </div>
 <!-- script start -->
 <script type="text/javascript">
-    $(document).ready(function(){
+        $(document).ready(function(){
         $.ajax({
              url: "api/order",
              type : 'GET',
@@ -106,13 +106,7 @@
              success : function(datas){
                 var data = '<select  id="member-return" name="member-return" class="form-control" ><option value="0">Chọn cán bộ</option>';
                 $.each(datas, function(key, val) {
-                    if (val['id'] == {{$data->member_return_id}}) {
-                        data += `<option value="${val['id']}" selected='selected'>${val['name']}</option>`; 
-                    }
-                    else {
-                        data += `<option value="${val['id']}">${val['name']}</option>`; 
-                    }
-                    
+                    data += `<option value="${val['id']}">${val['name']}</option>`; 
                 });
                 data+= '</select>';
                 $('#member-data').append(data);

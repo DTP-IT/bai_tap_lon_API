@@ -15,7 +15,7 @@
                     <thead>
                         <th>ID</th>
                         <th>Tên</th>
-                        <th>Giới tính</th>
+                        <th>Ngày tạo</th>
                         <th colspan="3" style="padding-left: 5%;">Action</th>
                     </thead>
                     <tbody id="data-members"></tbody>
@@ -40,7 +40,7 @@
             var data = "";
             var pageNumber = "";
             $.each(datas, function(key, val) {
-                data += `<tr><td>${val['id']}</td><td>${val['reader_name']}</td><td>${val['created_date']}</td><td style="padding-left: 1%;"><a href="order-detail?id=${val['id']}" class="btn btn-success"><i class="mdi mdi-book-open"></i></a></td><td ><a href="api/member/${val['id']}/edit" class="btn btn-success"><i class="mdi mdi-account-edit"></i></a></td><td><button class="btn btn-warning btnDeleteOrder" value='${val['id']}'><i class="mdi mdi-delete-sweep"></i></button></td></tr>`; 
+                data += `<tr><td>${val['id']}</td><td>${val['reader_name']}</td><td>${val['created_date']}</td><td ><a href="api/member/${val['id']}/edit" class="btn btn-success"><i class="mdi mdi-account-edit"></i></a></td><td><button class="btn btn-warning btnDeleteOrder" value='${val['id']}'><i class="mdi mdi-delete-sweep"></i></button></td></tr>`; 
             });
             $('#data-members').append(data);
         },

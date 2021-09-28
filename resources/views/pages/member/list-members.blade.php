@@ -48,7 +48,7 @@
             var data = "";
             var pageNumber = "";
             $.each(datas, function(key, val) {
-                data += `<tr><td>${val['id']}</td><td>${val['name']}</td><td>${val['gender']}</td><td>${val['dOB']}</td><td>${val['address']}</td><td><img style="max-width: 80px;" src="images/members/${val['avatar']}" class="img-responsive" alt="Image"></td><td>${val['phone']}</td><td>${val['email']}</td><td style="padding-left: 5%;"><a href="api/member/${val['id']}/edit" class="btn btn-success"><i class="mdi mdi-account-edit"></i></a></td><td><td><button class="btn btn-warning btnDeleteMember" value='${val['id']}'><i class="mdi mdi-delete-sweep"></i></button></td></tr>`; 
+                data += `<tr><td>${val['id']}</td><td>${val['name']}</td><td>${val['gender']}</td><td>${val['dOB']}</td><td>${val['address']}</td><td><img style="max-width: 80px;" src="images/members/${val['avatar']}" class="img-responsive" alt="Image"></td><td>${val['phone']}</td><td>${val['email']}</td><td style="padding-left: 5%;"><a href="api/member/${val['id']}/edit" class="btn btn-success"><i class="mdi mdi-account-edit"></i></a></td><td><td><button class="btn btn-warning btnDeleteMember" value='${val['id']}'><i class="mdi mdi-delete-sweep"></i></button></td></tr>`;
             });
             $('#data-members').append(data);
         },

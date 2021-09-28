@@ -81,7 +81,8 @@ class BorrowController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = OrderDetail::find($id);
+        return view('pages.borrow-book.update-borrow')->with(compact('data'));
     }
 
     /**
@@ -95,6 +96,7 @@ class BorrowController extends Controller
     {
         $order_details = OrderDetail::find($id);
         $order_details->order_id = $request['order_id'];
+        $order_details->book_id = $request['borrow-book'];
         $order_details->member_borrow_id = $request['member-borrow'];
         $order_details->status_borrow = $request['status_borrow'];
         if ($request['date_borrow']) {

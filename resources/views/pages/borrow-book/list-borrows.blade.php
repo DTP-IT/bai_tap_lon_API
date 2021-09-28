@@ -45,7 +45,7 @@
             var data = "";
             var pageNumber = "";
             $.each(datas, function(key, val) {
-                data += `<tr><td>${val['id']}</td><td>${val['order_id']}</td><td>${val['books_title']}</td><td>${val['member_name']}</td><td>${val['status_borrow']}</td><td>${val['date_borrow']}</td><td>${val['dead_return']}</td><td>${val['note']}</td><td style="padding-left: 1%;"><a href="order-detail?id=${val['id']}" class="btn btn-success"><i class="mdi mdi-book-open"></i></a></td><td ><a href="api/member/${val['id']}/edit" class="btn btn-success"><i class="mdi mdi-account-edit"></i></a></td><td><button class="btn btn-warning btnDeleteOrder" value='${val['id']}'><i class="mdi mdi-delete-sweep"></i></button></td></tr>`; 
+                data += `<tr><td>${val['id']}</td><td>${val['order_id']}</td><td>${val['books_title']}</td><td>${val['member_name']}</td><td>${val['status_borrow']}</td><td>${val['date_borrow']}</td><td>${val['dead_return']}</td><td>${val['note']}</td><td ><a href="api/borrow/${val['id']}/edit" class="btn btn-success"><i class="mdi mdi-account-edit"></i></a></td><td><button class="btn btn-warning btnDeleteOrder" value='${val['id']}'><i class="mdi mdi-delete-sweep"></i></button></td></tr>`; 
             });
             $('#data-members').append(data);
         },
